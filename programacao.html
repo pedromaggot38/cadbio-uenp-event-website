@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Anos de Biologia - UENP Campus Bandeirantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .italic-text {
+            font-style: italic;
+        }
+
+        .red-text {
+            color: red;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #1a3b13 0%, #1a3b13 50%, #1a3b13 100%);
+        }
+
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <a href="/">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <img src="./public/images/logo-evento.png" alt="Logo UENP" class="h-20 mr-3">
+                        <div>
+                            <h1 class="text-2xl font-bold">25 Anos de Biologia</h1>
+                            <p class="text-sm opacity-80">UENP - Campus Luiz Meneghel</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:flex items-center space-x-4">
+                        <div class="flex items-center space-x-2">
+                            <span id="event-status-badge"
+                                class="text-sm bg-white/20 px-3 py-1 rounded-full whitespace-nowrap"></span>
+                            <span class="text-sm">Bandeirantes, PR</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section id="palestras" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Palestras</h2>
+            <div id="palestras-container" class="grid md:grid-cols-2 gap-8"></div>
+        </section>
+
+        <section id="minicursos">
+            <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Minicursos</h2>
+            <div id="minicursos-container" class="grid md:grid-cols-3 gap-6"></div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">25 Anos de Biologia</h3>
+                    <p class="text-gray-400">Celebrando um quarto de século de excelência acadêmica e contribuições
+                        científicas do curso de Biologia da UENP Campus Luiz Meneghel.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Início</a></li>
+                        <li><a href="#programacao"
+                                class="text-gray-400 hover:text-white transition duration-300">Programação</a></li>
+                        <li><a href="#minicursos"
+                                class="text-gray-400 hover:text-white transition duration-300">Minicursos</a></li>
+                        <li><a href="#palestras"
+                                class="text-gray-400 hover:text-white transition duration-300">Palestras</a></li>
+                        <li><a href="#local"
+                                class="text-gray-400 hover:text-white transition duration-300">Localização</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-sm"></i>
+                            <span>Rod. BR-369, Km 54 - Bandeirantes, PR</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sm"></i>
+                            <span>centroacademico3desetembro@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/eventosbioclm/" target="_blank"
+                            class="bg-gray-800 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 Universidade Estadual do Norte do Paraná - UENP. Todos os direitos reservados.</p>
+                <p class="mt-2">Desenvolvido pelo Departamento de Biologia e Centro Acadêmico de Biologia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Executa o script quando o conteúdo da página for totalmente carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona o elemento no HTML onde a mensagem será exibida
+            const statusBadge = document.getElementById('event-status-badge');
+
+            // --- CONFIGURAÇÃO DAS DATAS ---
+            // ATENÇÃO: O mês em JavaScript começa em 0 (Janeiro = 0, Fevereiro = 1, etc.)
+            // Portanto, Setembro é o mês 8.
+            const eventStartDate = new Date(2025, 8, 2); // 02 de Setembro de 2025
+
+            // Defina uma data de término para o evento (Ex: 3 dias de duração)
+            const eventEndDate = new Date(2025, 8, 4); // 04 de Setembro de 2025
+
+            const today = new Date();
+
+            // Zera as horas para comparar apenas os dias
+            today.setHours(0, 0, 0, 0);
+
+            // Calcula a diferença de tempo em milissegundos
+            const timeDiff = eventStartDate.getTime() - today.getTime();
+
+            // Converte a diferença para dias e arredonda para cima
+            const daysRemaining = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+            // --- LÓGICA PARA EXIBIR A MENSAGEM ---
+            if (daysRemaining > 1) {
+                // Antes do evento (mais de 1 dia)
+                statusBadge.innerHTML = `🚀 Faltam <strong>${daysRemaining} dias</strong> para o evento!`;
+            } else if (daysRemaining === 1) {
+                // Véspera do evento
+                statusBadge.innerHTML = `🎉 Falta apenas <strong>1 dia</strong>! Prepare-se!`;
+            } else if (today >= eventStartDate && today <= eventEndDate) {
+                // Durante o evento
+                statusBadge.innerHTML = `🟢 <strong>O evento está acontecendo!</strong>`;
+                statusBadge.classList.remove('bg-white/20');
+                statusBadge.classList.add('bg-green-500/30', 'font-bold');
+            } else {
+                // Após o evento
+                statusBadge.innerHTML = `✅ O evento já foi finalizado.`;
+                statusBadge.classList.remove('bg-white/20');
+                statusBadge.classList.add('bg-gray-500/30');
+            }
+        });
+
+        // --- SCRIPT DE RENDERIZAÇÃO DINÂMICA ---
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ===================================
+            //           DADOS DAS PALESTRAS
+            // ===================================
+            const palestrasData = [
+                {
+                    img: './public/images/palestrantes/palestra-banner-sandra.png',
+                    title: 'Biodiversidade Amazônica',
+                    description: 'Explorando a riqueza da fauna e flora da maior floresta tropical do mundo.',
+                    speakerThumb: './public/images/palestrantes/carlos-silva-thumb.jpg',
+                    speakerName: 'Dr. Carlos Silva',
+                    speakerTitle: 'PhD em Ecologia pela USP',
+                    summary: 'Ecossistemas amazônicos, espécies endêmicas, conservação e ameaças.',
+                    date: '02/09 - 14h às 16h'
+                },
+                {
+                    img: './public/images/palestrantes/ana-oliveira.jpg',
+                    title: 'Biologia Molecular Avançada',
+                    description: 'Técnicas modernas e aplicações na pesquisa biológica.',
+                    speakerThumb: './public/images/palestrantes/ana-oliveira-thumb.jpg',
+                    speakerName: 'Dra. Ana Oliveira',
+                    speakerTitle: 'Pós-doutora em Biologia Molecular pela UNICAMP',
+                    summary: 'PCR, sequenciamento genético, CRISPR e aplicações clínicas.',
+                    date: '03/09 - 10h às 12h'
+                },
+                {
+                    img: './public/images/palestrantes/marcos-ribeiro.jpg',
+                    title: 'Conservação Marinha',
+                    description: 'Desafios e estratégias para preservação dos ecossistemas marinhos.',
+                    speakerThumb: './public/images/palestrantes/marcos-ribeiro-thumb.jpg',
+                    speakerName: 'Dr. Marcos Ribeiro',
+                    speakerTitle: 'Doutor em Oceanografia pela UFSC',
+                    summary: 'Ecossistemas costeiros, poluição marinha, áreas protegidas.',
+                    date: '03/09 - 14h às 16h'
+                },
+                {
+                    img: './public/images/palestrantes/juliana-costa.jpg',
+                    title: 'Biologia Forense',
+                    description: 'Aplicações da biologia na resolução de casos criminais.',
+                    speakerThumb: './public/images/palestrantes/juliana-costa-thumb.jpg',
+                    speakerName: 'Dra. Juliana Costa',
+                    speakerTitle: 'Mestre em Criminalística pela PUC-PR',
+                    summary: 'DNA forense, entomologia forense, análise de vestígios.',
+                    date: '04/09 - 10h às 12h'
+                }
+            ];
+
+            // ===================================
+            //           DADOS DOS MINICURSOS
+            // ===================================
+            const minicursosData = [
+                {
+                    img: './public/images/cursos/bioinformatica.jpg',
+                    title: 'Introdução à Bioinformática',
+                    description: 'Noções básicas de análise de dados biológicos.',
+                    instructorThumb: './public/images/instrutores/ricardo-almeida.jpg',
+                    instructorName: 'Prof. Ricardo Almeida',
+                    instructorTitle: 'Doutor em Bioinformática pela UFMG',
+                    summary: 'Bancos de dados biológicos, alinhamento de sequências, ferramentas básicas.',
+                    duration: '4 horas',
+                    details: '<strong>Pré-requisitos:</strong> Noções básicas de biologia molecular'
+                },
+                {
+                    img: './public/images/cursos/taxonomia-insetos.jpg',
+                    title: 'Taxonomia de Insetos',
+                    description: 'Identificação e classificação de insetos.',
+                    instructorThumb: './public/images/instrutores/fernanda-santos.jpg',
+                    instructorName: 'Dra. Fernanda Santos',
+                    instructorTitle: 'Pesquisadora do INPA especialista em Entomologia',
+                    summary: 'Chaves de identificação, principais ordens, técnicas de coleta e preservação.',
+                    duration: '6 horas (teórica + prática)',
+                    details: '<strong>Material:</strong> Trazer caderno de campo e lupa'
+                },
+                {
+                    img: './public/images/cursos/cultivo-orquideas.jpg',
+                    title: 'Cultivo de Orquídeas',
+                    description: 'Técnicas de cultivo e cuidados especiais.',
+                    instructorThumb: './public/images/instrutores/eduardo-lima.jpg',
+                    instructorName: 'Prof. Eduardo Lima',
+                    instructorTitle: 'Engenheiro Agrônomo e Orquidófilo',
+                    summary: 'Substratos, rega, adubação, controle de pragas e floração induzida.',
+                    duration: '3 horas (teórica + demonstração)',
+                    details: '<strong>Inclui:</strong> Apostila e mudas para prática'
+                },
+                { title: 'Microscopia Avançada', description: 'Técnicas de preparação e análise de lâminas.', instructorName: 'Dr. Paulo Henrique', duration: '5 horas' },
+                { title: 'Ecologia de Campo', description: 'Métodos de pesquisa em ambientes naturais.', instructorName: 'Dra. Carolina Moraes', duration: '8 horas' },
+                { title: 'Biotecnologia Vegetal', description: 'Técnicas de cultura de tecidos vegetais.', instructorName: 'Prof. Luiz Fernando', duration: '6 horas' },
+                { title: 'Herpetologia', description: 'Estudo de anfíbios e répteis.', instructorName: 'Dr. Marcelo Costa', duration: '4 horas' },
+                { title: 'Fotografia Científica', description: 'Técnicas para documentação científica.', instructorName: 'Prof. André Ribeiro', duration: '3 horas' },
+                { title: 'Genética Populacional', description: 'Fundamentos e aplicações.', instructorName: 'Dra. Patrícia Silva', duration: '5 horas' },
+                { title: 'Manejo de Fauna', description: 'Técnicas de captura e monitoramento.', instructorName: 'Dr. Roberto Alves', duration: '4 horas' },
+                { title: 'Bioestatística', description: 'Análise de dados biológicos.', instructorName: 'Prof. Daniel Martins', duration: '6 horas' },
+                { title: 'Educação Ambiental', description: 'Estratégias para conscientização.', instructorName: 'Dra. Vanessa Oliveira', duration: '3 horas' },
+            ];
+
+            // ===================================
+            //           FUNÇÃO DE RENDERIZAÇÃO
+            // ===================================
+            const palestrasContainer = document.getElementById('palestras-container');
+            const minicursosContainer = document.getElementById('minicursos-container');
+
+            // Renderiza as Palestras
+            palestrasContainer.innerHTML = palestrasData.map(palestra => `
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="${palestra.img}" alt="${palestra.title}" class="w-full h-40 sm:h-48 md:h-56 object-cover">
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-green-700">${palestra.title}</h3>
+                        <p class="text-gray-600 mb-4">${palestra.description}</p>
+                        <div class="flex items-center mb-4">
+                            <img src="${palestra.speakerThumb}" alt="${palestra.speakerName}" class="w-12 h-12 rounded-full mr-3 object-cover">
+                            <div>
+                                <p class="text-sm font-medium">${palestra.speakerName}</p>
+                                <p class="text-xs text-gray-500">${palestra.speakerTitle}</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500"><strong>Ementa:</strong> ${palestra.summary}</p>
+                        <p class="text-sm text-gray-500 mt-2"><strong>Data:</strong> ${palestra.date}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            // Renderiza os Minicursos
+            minicursosContainer.innerHTML = minicursosData.map(curso => `
+                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    ${curso.img ? `<img src="${curso.img}" alt="${curso.title}" class="w-full h-48 object-cover">` : ''}
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 text-green-700">${curso.title}</h3>
+                        <p class="text-gray-600 mb-4">${curso.description}</p>
+                        
+                        ${curso.instructorThumb ? `
+                        <div class="flex items-center mb-4">
+                            <img src="${curso.instructorThumb}" alt="${curso.instructorName}" class="w-12 h-12 rounded-full mr-3 object-cover">
+                            <div>
+                                <p class="text-sm font-medium">${curso.instructorName}</p>
+                                <p class="text-xs text-gray-500">${curso.instructorTitle || ''}</p>
+                            </div>
+                        </div>
+                        ` : `
+                        <div class="mb-4">
+                             <p class="text-sm font-medium"><strong>Instrutor:</strong> ${curso.instructorName}</p>
+                        </div>
+                        `}
+
+                        <div class="mt-auto pt-4 border-t border-gray-100">
+                            ${curso.summary ? `<p class="text-sm text-gray-500"><strong>Ementa:</strong> ${curso.summary}</p>` : ''}
+                            <p class="text-sm text-gray-500 mt-2"><strong>Duração:</strong> ${curso.duration}</p>
+                            ${curso.details ? `<p class="text-sm text-gray-500">${curso.details}</p>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+
+</html>
