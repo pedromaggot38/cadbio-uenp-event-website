@@ -145,7 +145,7 @@
                 <div class="border-b border-gray-200">
                     <nav class="flex flex-col sm:flex-row">
                         <button
-                            class="tab-button py-4 px-6 text-center border-b-2 font-medium text-sm border-blue-500 text-blue-600"
+                            class="tab-button py-4 px-6 text-center border-b-2 font-medium text-sm border-green-500 text-green-600"
                             data-tab="day1">
                             <i class="fas fa-calendar-day mr-2"></i> Dia 02/09
                         </button>
@@ -623,7 +623,7 @@
             const tagColors = {
                 'Minicurso': 'bg-green-100 text-green-800',
                 'Palestra': 'bg-purple-100 text-purple-800',
-                'Mesa Redonda': 'bg-gray-200 text-gray-800'
+                'Mesa Redonda': 'bg-cyan-200 text-cyan-800'
             };
             const periodColors = {
                 'Manhã': 'bg-teal-100 text-teal-800',
@@ -671,12 +671,12 @@
                 button.addEventListener('click', () => {
                     // Desativa todos os botões
                     tabButtons.forEach(btn => {
-                        btn.classList.remove('border-blue-500', 'text-blue-600');
+                        btn.classList.remove('border-green-500', 'text-green-600');
                         btn.classList.add('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
                     });
 
                     // Ativa o botão clicado
-                    button.classList.add('border-blue-500', 'text-blue-600');
+                    button.classList.add('border-green-500', 'text-green-600');
                     button.classList.remove('border-transparent', 'text-gray-500', 'hover:text-gray-700', 'hover:border-gray-300');
 
                     // Esconde todos os conteúdos
