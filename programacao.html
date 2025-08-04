@@ -28,6 +28,37 @@
             background: linear-gradient(135deg, #1a3b13 0%, #1a3b13 50%, #1a3b13 100%);
         }
 
+        #btnTopo {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            width: 56px;
+            height: 56px;
+            background-color: #17813e;
+            /* Verde vibrante */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            /* Garante forma circular */
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 56px;
+            /* Centraliza verticalmente */
+        }
+
+        #btnTopo:hover {
+            background-color: #1d3f29;
+            transform: scale(1.1);
+        }
+
         .countdown-box {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
@@ -160,6 +191,8 @@
         </div>
     </footer>
 
+    <button id="btnTopo" title="Voltar ao topo">↑</button>
+
     <script>
         // Executa o script quando o conteúdo da página for totalmente carregado
         document.addEventListener('DOMContentLoaded', () => {
@@ -204,6 +237,22 @@
                 statusBadge.classList.add('bg-gray-500/30');
             }
         });
+
+        const btnTopo = document.getElementById("btnTopo");
+
+        // Mostrar botão quando rolar para baixo 300px
+        window.onscroll = () => {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btnTopo.style.display = "block";
+            } else {
+                btnTopo.style.display = "none";
+            }
+        };
+
+        // Rolar suavemente para o topo
+        btnTopo.onclick = () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
 
         // --- SCRIPT DE RENDERIZAÇÃO DINÂMICA ---
         document.addEventListener('DOMContentLoaded', () => {
