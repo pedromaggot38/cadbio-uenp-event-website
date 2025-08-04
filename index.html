@@ -168,72 +168,21 @@
                     <div id="day3" class="tab-content space-y-6 hidden"></div>
                 </div>
             </div>
+            <div class="text-center mt-10">
+                <a href="programacao.html"
+                    class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full shadow-md transition duration-300">
+                    Saiba todos os detalhes sobre minicursos e palestras
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <!-- Mini Courses Section -->
-    <section id="minicursos" class="py-12 bg-white">
+    <section id="valores" class="py-12 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Valores</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div
-                    class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-dna text-blue-600"></i>
-                        </div>
-                        <h3 class="font-bold text-lg text-gray-800">Técnicas Moleculares</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">Introdução às principais técnicas de biologia molecular aplicadas à
-                        pesquisa.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar-alt mr-1"></i> 16/11 -
-                            Manhã</span>
-                        <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">20 vagas</span>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-leaf text-green-600"></i>
-                        </div>
-                        <h3 class="font-bold text-lg text-gray-800">Botânica de Campo</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">Métodos de coleta e identificação de espécies vegetais em ambientes
-                        naturais.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar-alt mr-1"></i> 16/11 -
-                            Tarde</span>
-                        <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">15 vagas</span>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-purple-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-microscope text-purple-600"></i>
-                        </div>
-                        <h3 class="font-bold text-lg text-gray-800">Microscopia Avançada</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">Utilização de microscópios e técnicas de preparação de lâminas.</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500"><i class="fas fa-calendar-alt mr-1"></i> 16/11 -
-                            Integral</span>
-                        <span class="text-sm bg-purple-100 text-purple-800 px-2 py-1 rounded">10 vagas</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-8">
-                <a href="programacao.html" class="inline-flex items-center text-blue-600 font-medium">
-                    Ver todos os minicursos disponíveis
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Valores de Inscrição</h2>
+            <div id="valores-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
     </section>
 
@@ -473,6 +422,54 @@
                 statusBadge.classList.remove('bg-white/20');
                 statusBadge.classList.add('bg-gray-500/30');
             }
+        });
+
+        const precos = [
+            {
+                titulo: "Evento Principal",
+                descricao: "Acesso completo às palestras e minicursos nos dias do evento acadêmico.",
+                preco: "R$ 60,00",
+                destaque: "Minicursos + Palestras",
+                cor: "blue",
+                icone: "fas fa-chalkboard-teacher",
+            },
+            {
+                titulo: "Festa Comemorativa",
+                descricao: "Entrada para a confraternização dos 25 anos do curso com música, comida e homenagens.",
+                preco: "R$ 25,00",
+                destaque: "Festa",
+                cor: "green",
+                icone: "fas fa-glass-cheers",
+            },
+            {
+                titulo: "Pacote Completo",
+                descricao: "Inclui participação no evento acadêmico e entrada na festa comemorativa.",
+                preco: "R$ 80,00",
+                destaque: "Evento + Festa",
+                cor: "purple",
+                icone: "fas fa-gift",
+            },
+        ];
+
+        const valoresGrid = document.getElementById("valores-grid");
+
+        precos.map((item) => {
+            const card = `
+      <div class="bg-white rounded-lg p-6 border border-gray-200 hover:shadow-lg transition duration-300">
+        <div class="flex items-center mb-4">
+          <div class="bg-${item.cor}-100 p-3 rounded-full mr-4">
+            <i class="${item.icone} text-${item.cor}-600 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-lg text-gray-800">${item.titulo}</h3>
+        </div>
+        <p class="text-gray-600 mb-4">${item.descricao}</p>
+        <div class="flex justify-between items-center">
+          <span class="text-xl font-semibold text-${item.cor}-600">${item.preco}</span>
+          <span class="text-sm bg-${item.cor}-100 text-${item.cor}-800 px-2 py-1 rounded">${item.destaque}</span>
+        </div>
+      </div>
+    `;
+            valoresGrid.insertAdjacentHTML("beforeend", card);
         });
 
         const eventos = [
