@@ -93,7 +93,7 @@
 
         <section id="minicursos">
             <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Minicursos</h2>
-            <div id="minicursos-container" class="grid md:grid-cols-3 gap-6"></div>
+            <div id="minicursos-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </section>
     </main>
 
@@ -210,44 +210,36 @@
             // ===================================
             const palestrasData = [
                 {
-                    img: './public/images/palestrantes/palestra-banner-sandra.png',
-                    title: 'Educação Sexual: desafios e possibilidades no ensino médio',
-                    description: 'Explorando a riqueza da fauna e flora da maior floresta tropical do mundo.',
-                    speakerThumb: './public/images/palestrantes/sandra.png',
-                    speakerName: 'Ma. Sandra Mara Miranda Proni',
-                    speakerTitle: 'PhD em Ecologia pela USP',
-                    summary: 'Ecossistemas amazônicos, espécies endêmicas, conservação e ameaças.',
-                    date: '02/09 - 19h às 20:30h'
-                },
-                {
-                    img: './public/images/palestrantes/ana-oliveira.jpg',
-                    title: 'Biologia Molecular Avançada',
-                    description: 'Técnicas modernas e aplicações na pesquisa biológica.',
+                    img: './public/images/palestrantes/palestra-banner-fabricio.png',
+                    title: 'Reconhecimento de Padrões em Bioinformática',
                     speakerThumb: './public/images/palestrantes/fabricio.png',
                     speakerName: 'Fabricio Martins Lopes',
-                    speakerTitle: 'Pós-doutora em Biologia Molecular pela UNICAMP',
-                    summary: 'PCR, sequenciamento genético, CRISPR e aplicações clínicas.',
-                    date: '03/09 - 10h às 12h'
+                    speakerTitle: 'Doutor e Professor Titular UTFPR - <i>Campus</i> Cornélio Procópio',
+                    date: '02/09 - 19h às 20h30'
                 },
                 {
-                    img: './public/images/palestrantes/marcos-ribeiro.jpg',
-                    title: 'Conservação Marinha',
-                    description: 'Desafios e estratégias para preservação dos ecossistemas marinhos.',
-                    speakerThumb: './public/images/palestrantes/milena.png',
-                    speakerName: 'Dr. Marcos Ribeiro',
-                    speakerTitle: 'Doutor em Oceanografia pela UFSC',
-                    summary: 'Ecossistemas costeiros, poluição marinha, áreas protegidas.',
-                    date: '03/09 - 14h às 16h'
+                    img: './public/images/palestrantes/palestra-banner-sandra.png',
+                    title: 'Educação Sexual: desafios e possibilidades no ensino médio',
+                    speakerThumb: './public/images/palestrantes/sandra.png',
+                    speakerName: 'Sandra Mara Miranda Proni',
+                    speakerTitle: 'Mestra em Ensino e Docente de Educação Básica',
+                    date: '02/09 - 21h às 22h30'
                 },
                 {
-                    img: './public/images/palestrantes/juliana-costa.jpg',
-                    title: 'Biologia Forense',
-                    description: 'Aplicações da biologia na resolução de casos criminais.',
+                    img: './public/images/palestrantes/palestra-banner-diego.png',
+                    title: 'Eventos climáticos extremos no Holoceno-Antropoceno: Será o fim da aventura humana na Terra?',
                     speakerThumb: './public/images/palestrantes/diego.png',
-                    speakerName: 'Dra. Juliana Costa',
-                    speakerTitle: 'Mestre em Criminalística pela PUC-PR',
-                    summary: 'DNA forense, entomologia forense, análise de vestígios.',
-                    date: '04/09 - 10h às 12h'
+                    speakerName: 'Diego Resende Rodrigues',
+                    speakerTitle: 'Doutor e Docente UENP - <i>Campus</i> Luiz Meneghel',
+                    date: '03/09 - --h às --h'
+                },
+                {
+                    img: './public/images/palestrantes/palestra-banner-milena.png',
+                    title: 'Diabetes mellitus tipo 2: fatores de risco, mecanismos fisiopatológicos e tratamentos alternativos',
+                    speakerThumb: './public/images/palestrantes/milena.png',
+                    speakerName: 'Milena Cremer de Souza',
+                    speakerTitle: 'Mestra em Patologia Ambiental (UEL) e Doutoranda em Biologia Geral e Aplicada (UNESP)',
+                    date: '04/09 - 14h às 16h'
                 }
             ];
 
@@ -256,47 +248,136 @@
             // ===================================
             const minicursosData = [
                 {
-                    img: './public/images/cursos/bioinformatica.jpg',
-                    title: 'Introdução à Bioinformática',
-                    description: 'Noções básicas de análise de dados biológicos.',
-                    instructorThumb: './public/images/instrutores/ricardo-almeida.jpg',
-                    instructorName: 'Prof. Ricardo Almeida',
-                    instructorTitle: 'Doutor em Bioinformática pela UFMG',
-                    summary: 'Bancos de dados biológicos, alinhamento de sequências, ferramentas básicas.',
-                    duration: '4 horas',
-                    details: '<strong>Pré-requisitos:</strong> Noções básicas de biologia molecular'
+                    title: "Introdução à aquarela para ilustração científica, ensino e extensão",
+                    summary: "O curso irá abordar, de forma introdutória, os principais materiais, técnicas e métodos para iniciar na pintura utilizando aquarela. Será um curso majoritariamente prático onde irei falar da minha experiência na pintura, inspirações e principais referências. Iremos utilizar animais, fungos ou plantas como modelo para criar sua própria ilustração. Também será discutido como a arte pode ser aplicada em diferentes áreas como o ensino de ciências e biologia, ilustração científica e atividades de extensão.",
+                    duration: "4 horas",
+                    limit: "15",
+                    datetime: "Terça-feira (02/09) – 08h00 às 11h30",
+                    instructors: [
+                        {
+                            name: "Fernanda Dotti do Prado",
+                            title: "Doutora",
+                            thumb: "fernanda.png"
+                        }
+                    ]
                 },
                 {
-                    img: './public/images/cursos/taxonomia-insetos.jpg',
-                    title: 'Taxonomia de Insetos',
-                    description: 'Identificação e classificação de insetos.',
-                    instructorThumb: './public/images/instrutores/fernanda-santos.jpg',
-                    instructorName: 'Dra. Fernanda Santos',
-                    instructorTitle: 'Pesquisadora do INPA especialista em Entomologia',
-                    summary: 'Chaves de identificação, principais ordens, técnicas de coleta e preservação.',
-                    duration: '6 horas (teórica + prática)',
-                    details: '<strong>Material:</strong> Trazer caderno de campo e lupa'
+                    title: "Fungos de importância ambiental: práticas de identificação e cultivo",
+                    summary: "Estudo das características gerais dos fungos de importância ambiental: classificação, morfologia, fisiologia e estratégias nutricionais. Técnicas laboratoriais para isolamento, semeadura, cultivo e identificação dos fungos de importância ambiental.",
+                    duration: "8 horas",
+                    limit: "14",
+                    datetime: "Terça-feira (02/09) – 13h30 às 17h30 e Quarta-feira (03/09) – 13h30 às 17h30",
+                    instructors: [
+                        {
+                            name: "Christiane Luciana da Costa",
+                            title: "Doutora",
+                            thumb: "christiane.jpeg"
+                        }
+                    ]
                 },
                 {
-                    img: './public/images/cursos/cultivo-orquideas.jpg',
-                    title: 'Cultivo de Orquídeas',
-                    description: 'Técnicas de cultivo e cuidados especiais.',
-                    instructorThumb: './public/images/instrutores/eduardo-lima.jpg',
-                    instructorName: 'Prof. Eduardo Lima',
-                    instructorTitle: 'Engenheiro Agrônomo e Orquidófilo',
-                    summary: 'Substratos, rega, adubação, controle de pragas e floração induzida.',
-                    duration: '3 horas (teórica + demonstração)',
-                    details: '<strong>Inclui:</strong> Apostila e mudas para prática'
+                    title: "Segredos do Mar: Navegando pelo mundo dos Invertebrados Marinhos",
+                    summary: "O minicurso tem por objetivo conhecer a filogenia dos invertebrados marinhos, apresentando seus principais filos e seus grupos, características gerais e morfofuncionais, ameaças ao ecossistema marinho e estratégias de conservação, assim como a importância do equilíbrio para o ecossistema.",
+                    duration: "4 horas",
+                    limit: "15",
+                    datetime: "Terça-feira (02/09) às 13h30 à 17h30",
+                    instructors: [
+                        {
+                            name: "Amanda Novelli",
+                            title: "Graduada em Bacharel e Licenciatura",
+                            thumb: "amanda.jpg"
+                        }
+                    ]
                 },
-                { title: 'Microscopia Avançada', description: 'Técnicas de preparação e análise de lâminas.', instructorName: 'Dr. Paulo Henrique', duration: '5 horas' },
-                { title: 'Ecologia de Campo', description: 'Métodos de pesquisa em ambientes naturais.', instructorName: 'Dra. Carolina Moraes', duration: '8 horas' },
-                { title: 'Biotecnologia Vegetal', description: 'Técnicas de cultura de tecidos vegetais.', instructorName: 'Prof. Luiz Fernando', duration: '6 horas' },
-                { title: 'Herpetologia', description: 'Estudo de anfíbios e répteis.', instructorName: 'Dr. Marcelo Costa', duration: '4 horas' },
-                { title: 'Fotografia Científica', description: 'Técnicas para documentação científica.', instructorName: 'Prof. André Ribeiro', duration: '3 horas' },
-                { title: 'Genética Populacional', description: 'Fundamentos e aplicações.', instructorName: 'Dra. Patrícia Silva', duration: '5 horas' },
-                { title: 'Manejo de Fauna', description: 'Técnicas de captura e monitoramento.', instructorName: 'Dr. Roberto Alves', duration: '4 horas' },
-                { title: 'Bioestatística', description: 'Análise de dados biológicos.', instructorName: 'Prof. Daniel Martins', duration: '6 horas' },
-                { title: 'Educação Ambiental', description: 'Estratégias para conscientização.', instructorName: 'Dra. Vanessa Oliveira', duration: '3 horas' },
+                {
+                    title: "Insetos comestíveis do manejo à aplicação alimentar",
+                    summary: "Explorar a viabilidade dos insetos comestíveis como uma alternativa sustentável e nutritiva para a alimentação humana e animal, com ênfase na prática de produção e consumo",
+                    duration: "4 horas",
+                    limit: "15",
+                    datetime: "Quarta-feira (03/09) às 8h à 11h30",
+                    instructors: [
+                        {
+                            name: "Lilian Regina Ciró",
+                            title: "Pós-graduanda",
+                            thumb: "lilian.jpg"
+                        }
+                    ]
+                },
+                {
+                    title: "Vivências com plantas medicinais: da estrutura anatômica à aplicação prática.",
+                    summary: "Estruturas secretoras em plantas medicinais e seus metabólitos especiais com princípio ativo. Observação microscópica e experiências práticas com óleos essenciais e chás.",
+                    duration: "4 horas",
+                    limit: "15",
+                    datetime: "Quarta-feira (03/09) às 13h30 à 17h30",
+                    instructors: [
+                        {
+                            name: "Flávia Maria Leme",
+                            title: "Doutora",
+                            thumb: "flavia.png"
+                        }
+                    ]
+                },
+                {
+                    title: "O método científico em ecologia: prática de observação na natureza, teste de hipóteses, análise e interpretação de dados",
+                    summary: "Capacitar os participantes a aplicar o método científico à formulação de perguntas ecológicas, com foco na observação da natureza, construção de hipóteses, coleta de dados e interpretação de resultados.",
+                    duration: "8 horas",
+                    limit: "10",
+                    datetime: "Quinta-feira (04/09) às 13h30 à 17h30 e quinta-feira (04/09) às 13h30 à 17h30",
+                    instructors: [
+                        {
+                            name: "Yves Rafael Bovolenta",
+                            title: "Doutor",
+                            thumb: "yves.png"
+                        }
+                    ]
+                },
+                {
+                    title: "Noções de genética forense aplicada à conservação da biodiversidade.",
+                    summary: "Noções de Genética de Biologia Molecular; Noções de Genética da Conservação; Noções de marcadores genéticos e sequenciamento de DNA; Noções de ferramentas moleculares aplicadas na Genética Forense; Estratégias de bioinformática; Principais aplicações da Genética Forense na preservação da biodiversidade.",
+                    duration: "8 horas",
+                    limit: "20",
+                    datetime: "Quinta-feira (04/09) às 13h30 à 17h30 e quinta-feira (04/09) às 13h30 à 17h30",
+                    instructors: [
+                        {
+                            name: "Dhiego Gomes Ferreira",
+                            title: "Doutor",
+                            thumb: "dhiego.jpg"
+                        }
+                    ]
+                },
+                {
+                    title: "Introdução à aquarela para ilustração científica, ensino e extensão",
+                    summary: "O curso irá abordar, de forma introdutória, os principais materiais, técnicas e métodos para iniciar na pintura utilizando aquarela. Será um curso majoritariamente prático onde irei falar da minha experiência na pintura, inspirações e principais referências. Iremos utilizar animais, fungos ou plantas como modelo para criar sua própria ilustração. Também será discutido como a arte pode ser aplicada em diferentes áreas como o ensino de ciências e biologia, ilustração científica e atividades de extensão.",
+                    duration: "4 horas",
+                    limit: "15",
+                    datetime: "Terça-feira (02/09) – 08h00 às 11h30",
+                    instructors: [
+                        {
+                            name: "Fernanda Dotti do Prado",
+                            title: "Doutora",
+                            thumb: "fernanda.png"
+                        }
+                    ]
+                },
+                {
+                    title: "Introdução Teórico-Prática à Bioimpressão 3D",
+                    summary: "Este minicurso oferece uma introdução teórico- prática à bioimpressão 3D, abordando os princípios fundamentais da tecnologia, os diferentes tipos de bioimpressoras e os principais biomateriais (bioinks) utilizados. Serão discutidas aplicações em saúde, engenharia de tecidos e testes in vitro. Os participantes terão contato direto com equipamentos de bioimpressão e com os softwares utilizados para modelagem tridimensional, fatiamento e controle da bioimpressora.",
+                    duration: "4 horas",
+                    limit: "20",
+                    datetime: "Quinta-feira (04/09) às 13h30 à 17h30",
+                    instructors: [
+                        {
+                            name: "Maurício Fogaça Azevedo",
+                            title: "Mestre",
+                            thumb: "mauricio.jpg"
+                        },
+                        {
+                            name: "Luís Felipe Antunes Prado",
+                            title: "Graduando",
+                            thumb: "luis.png"
+                        }
+                    ]
+                },
             ];
 
             // ===================================
@@ -312,49 +393,53 @@
 
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2 text-green-700">${palestra.title}</h3>
-                        <p class="text-gray-600 mb-4">${palestra.description}</p>
                         <div class="flex items-center mb-4">
-                            <img src="${palestra.speakerThumb}" alt="${palestra.speakerName}" class="w-12 h-12 rounded-full mr-3 object-cover">
+                            <img src="${palestra.speakerThumb}" alt="${palestra.speakerName}" class="w-16 h-16 rounded-full mr-3 object-cover">
                             <div>
                                 <p class="text-sm font-medium">${palestra.speakerName}</p>
                                 <p class="text-xs text-gray-500">${palestra.speakerTitle}</p>
                             </div>
                         </div>
-                        <p class="text-sm text-gray-500"><strong>Ementa:</strong> ${palestra.summary}</p>
                         <p class="text-sm text-gray-500 mt-2"><strong>Data:</strong> ${palestra.date}</p>
                     </div>
                 </div>
             `).join('');
 
             // Renderiza os Minicursos
+            const cursos = minicursosData; // sua lista
+
+            // Aplica classe de centralização se houver menos de 3 minicursos
+            if (cursos.length < 3) {
+                container.classList.add("justify-items-center");
+                container.classList.remove("lg:grid-cols-3");
+                container.classList.add(`grid-cols-${cursos.length}`); // grid-cols-1 ou grid-cols-2
+            }
             minicursosContainer.innerHTML = minicursosData.map(curso => `
                 <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-                    ${curso.img ? `<img src="${curso.img}" alt="${curso.title}" class="w-full h-48 object-cover">` : ''}
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold mb-2 text-green-700">${curso.title}</h3>
-                        <p class="text-gray-600 mb-4">${curso.description}</p>
-                        
-                        ${curso.instructorThumb ? `
-                        <div class="flex items-center mb-4">
-                            <img src="${curso.instructorThumb}" alt="${curso.instructorName}" class="w-12 h-12 rounded-full mr-3 object-cover">
-                            <div>
-                                <p class="text-sm font-medium">${curso.instructorName}</p>
-                                <p class="text-xs text-gray-500">${curso.instructorTitle || ''}</p>
-                            </div>
-                        </div>
-                        ` : `
-                        <div class="mb-4">
-                             <p class="text-sm font-medium"><strong>Instrutor:</strong> ${curso.instructorName}</p>
-                        </div>
-                        `}
+                    <div class="p-6 flex flex-col">
+                        <h3 class="text-xl font-bold mb-4 text-green-700">${curso.title}</h3>
 
-                        <div class="mt-auto pt-4 border-t border-gray-100">
-                            ${curso.summary ? `<p class="text-sm text-gray-500"><strong>Ementa:</strong> ${curso.summary}</p>` : ''}
-                            <p class="text-sm text-gray-500 mt-2"><strong>Duração:</strong> ${curso.duration}</p>
-                            ${curso.details ? `<p class="text-sm text-gray-500">${curso.details}</p>` : ''}
+                        <div class="mb-4 space-y-4">
+                            ${curso.instructors.map(instrutor => `
+                                <div class="flex items-center gap-4">
+                                    <img src="public/images/ministrantes/${instrutor.thumb}" alt="${instrutor.name}" class="w-36 h-36 rounded-full border-4 border-green-600 object-cover">
+                                    <div class="flex flex-col">
+                                        <p class="text-base font-semibold text-gray-800">${instrutor.name}</p>
+                                        <p class="text-sm text-gray-500">${instrutor.title || ''}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <div class="mt-auto pt-4 border-t border-gray-100 space-y-2 text-sm text-gray-600">
+                            ${curso.summary ? `<p><strong>Ementa:</strong> ${curso.summary}</p>` : ''}
+                            <p><strong>Carga horária:</strong> ${curso.duration}</p>
+                            ${curso.limit ? `<p><strong>Vagas:</strong> ${curso.limit} participantes</p>` : ''}
+                            ${curso.datetime ? `<p><strong>Data e Hora:</strong> ${curso.datetime}</p>` : ''}
                         </div>
                     </div>
                 </div>
+
             `).join('');
         });
     </script>
