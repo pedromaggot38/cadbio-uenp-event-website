@@ -294,16 +294,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contato e Organização</h2>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white p-6 rounded-xl shadow-md text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="font-bold text-xl text-gray-800 mb-2">Coordenação do Evento</h3>
-                    <p class="text-gray-600 mb-2">Prof. Dr. Marco Antonio Zanoni</p>
-                    <p class="text-gray-500 text-sm break-words">zanoni@uenp.edu.br</p>
-                </div>
-
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white p-6 rounded-xl shadow-md text-center">
                     <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-users text-green-600 text-2xl"></i>
@@ -628,7 +619,7 @@
                     { time: "13:30 - 17:30", type: "Minicurso", period: "Tarde", title: `<span class="red-text">[PT.2]</span> Fungos de importância ambiental: práticas de identificação e cultivo`, speaker: "Com: Christiane Luciana da Costa (14 vagas)", border: true },
                     { time: "13:30 - 17:30", type: "Minicurso", period: "Tarde", title: "Vivências com plantas medicinais: da estrutura anatômica à aplicação prática", speaker: "Com: Flávia Maria Leme (15 vagas)", border: false },
                     { time: "13:30 - 17:30", type: "Minicurso", period: "Tarde", title: "Paleontologia", speaker: "Com: Ariel Milani Martine (20 vagas)", border: false },
-                    { time: "19:00 - 22:30", type: "Mesa Redonda", period: "Noite", title: "Meio ambiente, biodiversidade e crises climáticas", speaker: "Roda de Conversa", border: true },
+                    { time: "19:00 - 22:30", type: "Roda de Conversa", period: "Noite", title: "Meio ambiente, biodiversidade e crises climáticas", speaker: "Roda de Conversa", border: true },
                 ],
                 day3: [
                     { time: "08:00 - 12:00", type: "Minicurso", period: "Manhã", title: `<span class="red-text">[PT.1]</span> O método científico em ecologia: prática de observação na natureza, teste de hipóteses, análise e interpretação de dados`, speaker: "Com: Yves Rafael Bovolenta. (10 vagas)", border: false },
@@ -647,7 +638,7 @@
             const tagColors = {
                 'Minicurso': 'bg-green-100 text-green-800',
                 'Palestra': 'bg-purple-100 text-purple-800',
-                'Mesa Redonda': 'bg-cyan-200 text-cyan-800'
+                'Roda de Conversa': 'bg-cyan-200 text-cyan-800'
             };
             const periodColors = {
                 'Manhã': 'bg-teal-100 text-teal-800',
