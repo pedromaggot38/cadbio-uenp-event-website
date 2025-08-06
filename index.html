@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="public/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>25 Anos de Biologia</title>
+    <title>25 Anos de Biologia / UENP-CLM</title>
     <link href="./css/tailwind.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -517,11 +517,10 @@
                 imagem: "public/images/manu-agradecimento.png",
             },
             {
-                titulo: "Festa de Comemoração dos 25 Anos da Biologia",
+                titulo: "Nota oficial",
                 descricao:
-                    "O Centro Acadêmico e a Atlética Máfia Etílica estão organizando uma festa inesquecível em comemoração aos 25 anos do curso de Biologia! O apoio e a participação dos discentes são fundamentais para o sucesso da nossa celebração. Marque na agenda: o evento acontecerá no dia 20 de setembro de 2025.",
+                    "Por meio desta, o Centro Acadêmico vem informar que a comemoração prevista para o dia 20/09 será adiada devido a motivos alheios à nossa vontade. Reiteramos que o evento será reorganizado em conjunto com os docentes do colegiado do curso, garantindo sua realização futura. Pedimos paciência e compreensão de todos para que possamos realizar esta celebração da melhor forma possível. Novas informações serão divulgadas em breve!",
                 imagem: "public/images/festa-banner.png",
-                data: "20/09",
             },
             {
                 titulo: "Agradecimento à Universidade Estadual do Norte do Paraná",
@@ -536,14 +535,6 @@
             <div class="event-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
             <div class="h-60 relative overflow-hidden">
                 <img src="${evento.imagem}" alt="${evento.titulo}" class="w-full h-full object-cover" />
-                ${evento.data
-                    ? `<div class="absolute bottom-4 left-4">
-                        <span class="bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded">
-                        Dia ${evento.data}
-                        </span>
-                    </div>`
-                    : ""
-                }
             </div>
             <div class="p-6">
                 <h3 class="text-xl font-bold mb-2 text-gray-800">${evento.titulo}</h3>
@@ -626,9 +617,9 @@
                 day1: [
                     { time: "08:00 - 11:30", type: "Minicurso", period: "Manhã", title: "Introdução à aquarela na educação ambiental e ilustração científica", speaker: "Com: Fernanda Dotti do Prado (12 vagas)", border: false },
                     { time: "08:00 - 11:30", type: "Minicurso", period: "Manhã", title: `<span class="red-text">[PT.1]</span> Citogenética e Evolução Cromossômica de Aranhas`, speaker: "Com: Matheus Pires Rincão (20 vagas)", border: false },
-                    { time: "13:30 - 17:30", type: "Minicurso", period: "Tarde", title: `<span class="red-text">[PT.2]</span> Citogenética e Evolução Cromossômica de Aranhas`, speaker: "Com: Matheus Pires Rincão (20 vagas)", border: true },
+                    { time: "13:30 - 17:30", type: "Minicurso", period: "Tarde", title: "Segredos do Mar: Navegando pelo mundo dos Invertebrados Marinhos", speaker: "Com: Amanda Novelli (15 vagas)", border: true },
                     { time: "13:30 - 17:30", type: "Minicurso", period: "Tarde", title: `<span class="red-text">[PT.1]</span> Fungos de importância ambiental: práticas de identificação e cultivo`, speaker: "Com: Christiane Luciana da Costa (14 vagas)", border: false },
-                    { time: "13:30 - 17:30", type: "Minicurso", period: "Tarde", title: "Segredos do Mar: Navegando pelo mundo dos Invertebrados Marinhos", speaker: "Com: Amanda Novelli (15 vagas)", border: false },
+                    { time: "13:30 - 17:30", type: "Minicurso", period: "Tarde", title: `<span class="red-text">[PT.2]</span> Citogenética e Evolução Cromossômica de Aranhas`, speaker: "Com: Matheus Pires Rincão (20 vagas)", border: false },
                     { time: "19:00 - 20:30", type: "Palestra", period: "Noite", title: "Reconhecimento de Padrões em Bioinformática", speaker: "Com: Fabricio Martins Lopes", border: true },
                     { time: "21:00 - 22:30", type: "Palestra", period: "Noite", title: "Educação Sexual: desafios e possibilidades no ensino médio", speaker: "Com: Sandra Mara Miranda Proni", border: false }
                 ],
@@ -666,7 +657,7 @@
 
             // Função para criar o HTML de um evento
             function createEventHtml(event) {
-                const borderClass = event.border ? 'border-t border-gray-100 pt-6' : '';
+                const borderClass = event.border ? 'border-t border-gray-200 pt-6' : '';
                 const typeColor = tagColors[event.type] || 'bg-gray-100 text-gray-800';
                 const periodColor = periodColors[event.period] || 'bg-gray-100 text-gray-800';
 
